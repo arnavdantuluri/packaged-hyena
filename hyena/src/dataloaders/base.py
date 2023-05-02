@@ -10,7 +10,7 @@ import torch
 import torchvision
 from einops import rearrange
 from einops.layers.torch import Rearrange
-from hyena.srcutils import is_list, permutations
+from hyena.src.utils import is_list, permutations
 from torch.nn import functional as F
 
 def deprecated(cls_or_func):
