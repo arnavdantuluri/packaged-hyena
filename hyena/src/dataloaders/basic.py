@@ -3,9 +3,9 @@ import numpy as np
 import torch
 import torchvision
 from einops.layers.torch import Rearrange
-from hyena.srcutils import permutations
+from hyena.src.utils import permutations
 
-from hyena.srcdataloaders.base import default_data_path, ImageResolutionSequenceDataset, ResolutionSequenceDataset, SequenceDataset
+from hyena.src.dataloaders.base import default_data_path, ImageResolutionSequenceDataset, ResolutionSequenceDataset, SequenceDataset
 
 
 class MNIST(SequenceDataset):
