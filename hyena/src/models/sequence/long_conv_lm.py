@@ -33,8 +33,8 @@ try:
 except ImportError:
     dropout_add_layer_norm = None
 
-from safari.src.utils import instantiate
-import safari.src.utils.registry as registry
+from hyena.src.utils import instantiate
+import hyena.src.utils.registry as registry
 
 def create_mixer_cls(layer=None, process_group=None,
                      attn_layer_idx=None, attn_cfg=None, layer_idx=None,

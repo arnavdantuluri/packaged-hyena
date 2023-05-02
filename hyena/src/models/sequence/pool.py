@@ -5,8 +5,8 @@ from torch import nn
 import torch.nn.functional as F
 from einops import rearrange, repeat, reduce
 
-from safari.src.models.sequence import SequenceModule
-from safari.src.models.nn import LinearActivation
+from hyena.src.models.sequence import SequenceModule
+from hyena.src.models.nn import LinearActivation
 
 """ Simple pooling functions that just downsample or repeat
 

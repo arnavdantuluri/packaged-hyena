@@ -7,11 +7,11 @@ from torch import nn
 import torch.nn.functional as F
 from einops import rearrange, repeat
 
-import safari.src.models.nn.utils as U
-import safari.src.utils as utils
-import safari.src.utils.config
-from safari.src.models.sequence.block import SequenceResidualBlock
-from safari.src.models.nn.components import Normalization
+import hyena.src.models.nn.utils as U
+import hyena.src.utils as utils
+import hyena.src.utils.config
+from hyena.src.models.sequence.block import SequenceResidualBlock
+from hyena.src.models.nn.components import Normalization
 
 class Encoder(nn.Module):
     """Encoder abstraction

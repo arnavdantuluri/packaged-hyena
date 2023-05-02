@@ -17,15 +17,15 @@ from pytorch_lightning.loggers import WandbLogger
 from pytorch_lightning.utilities import rank_zero_only, rank_zero_warn
 from tqdm.auto import tqdm
 
-import safari.src.models.nn.utils as U
-import safari.src.utils as utils
-import safari.src.utils.train
-from safari.src.dataloaders import SequenceDataset  # TODO make registry
-from safari.src.tasks import decoders, encoders, tasks
-from safari.src.utils import registry
-from safari.src.utils.optim_groups import add_optimizer_hooks
+import hyena.src.models.nn.utils as U
+import hyena.src.utils as utils
+import hyena.src.utils.train
+from hyena.src.dataloaders import SequenceDataset  # TODO make registry
+from hyena.src.tasks import decoders, encoders, tasks
+from hyena.src.utils import registry
+from hyena.src.utils.optim_groups import add_optimizer_hooks
 
-log = safari.src.utils.train.get_logger(__name__)
+log = hyena.src.utils.train.get_logger(__name__)
 
 # Turn on TensorFloat32 (speeds up large model training substantially)
 import torch.backends

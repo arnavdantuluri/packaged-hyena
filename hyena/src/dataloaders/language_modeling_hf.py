@@ -16,13 +16,13 @@ from torch.utils.data.dataloader import DataLoader, Dataset
 from transformers import AutoTokenizer
 from datasets import load_dataset
 
-from safari.src.dataloaders.base import SequenceDataset, default_data_path
+from hyena.src.dataloaders.base import SequenceDataset, default_data_path
 
-from safari.src.dataloaders.datasets.lm_dataset import LMDataset
-from safari.src.dataloaders.fault_tolerant_sampler import RandomFaultTolerantSampler
-from safari.src.dataloaders.fault_tolerant_sampler import FaultTolerantDistributedSampler
-from safari.src.dataloaders.datasets.detokenizer import DATASET_TOKENIZATION_REGISTRY
-from safari.src.utils.train import get_logger
+from hyena.src.dataloaders.datasets.lm_dataset import LMDataset
+from hyena.src.dataloaders.fault_tolerant_sampler import RandomFaultTolerantSampler
+from hyena.src.dataloaders.fault_tolerant_sampler import FaultTolerantDistributedSampler
+from hyena.src.dataloaders.datasets.detokenizer import DATASET_TOKENIZATION_REGISTRY
+from hyena.src.utils.train import get_logger
 logger = get_logger()
 
 

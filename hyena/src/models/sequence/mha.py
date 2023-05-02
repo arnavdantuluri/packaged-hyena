@@ -4,8 +4,8 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 import hydra
-from safari.src.models.sequence.base import SequenceModule, TransposedModule
-import safari.src.models.nn.utils as U
+from hyena.src.models.sequence.base import SequenceModule, TransposedModule
+import hyena.src.models.nn.utils as U
 from einops import rearrange
 
 @TransposedModule
@@ -21,8 +21,8 @@ class MultiheadAttention(SequenceModule):
     def forward(self, src, attn_mask=None, key_padding_mask=None, state=None, **kwargs):
         """ state should represent a mask and key padding mask """
         if self.causal and attn_mask is None:
-            attn_mask = torch.triu(torch.ones(safari.src.size(-2), safari.src.size(-2),
-                                              dtype=torch.bool, device=safari.src.device),
+            attn_mask = torch.triu(torch.ones(hyena.src.size(-2), hyena.src.size(-2),
+                                              dtype=torch.bool, device=hyena.src.device),
                                        diagonal=1)
         # attn_mask, key_padding_mask = state
         # Note that this returns None for the second argument

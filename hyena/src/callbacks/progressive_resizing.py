@@ -1,8 +1,8 @@
 import numpy as np
 from pytorch_lightning.callbacks import Callback
 
-import safari.src.utils as utils
-from safari.src.utils import registry
+import hyena.srcutils as utils
+from hyena.srcutils import registry
 
 
 class ProgressiveResizing(Callback):

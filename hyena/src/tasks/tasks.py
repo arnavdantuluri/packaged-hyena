@@ -7,15 +7,15 @@ import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange
 from omegaconf import ListConfig
-from safari.src.models.nn.components import ReversibleInstanceNorm1dInput, ReversibleInstanceNorm1dOutput, \
+from hyena.src.models.nn.components import ReversibleInstanceNorm1dInput, ReversibleInstanceNorm1dOutput, \
     TSNormalization, TSInverseNormalization
 
-from safari.src.models.nn.adaptive_softmax import AdaptiveEmbedding, ProjectedAdaptiveLogSoftmax
-import safari.src.tasks.metrics as M
-from safari.src.tasks.torchmetrics import torchmetric_fns as tm_mine
-import safari.src.models.nn.utils as U
+from hyena.src.models.nn.adaptive_softmax import AdaptiveEmbedding, ProjectedAdaptiveLogSoftmax
+import hyena.src.tasks.metrics as M
+from hyena.src.tasks.torchmetrics import torchmetric_fns as tm_mine
+import hyena.src.models.nn.utils as U
 import torchmetrics as tm
-from safari.src.utils.config import to_list, instantiate
+from hyena.src.utils.config import to_list, instantiate
 from torchmetrics import MetricCollection
 
 class BaseTask:

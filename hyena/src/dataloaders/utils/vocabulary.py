@@ -19,7 +19,7 @@ from collections import OrderedDict
 
 import torch
 
-import safari.src.utils as utils
+import hyena.src.utils as utils
 
 
 class Vocab(object):

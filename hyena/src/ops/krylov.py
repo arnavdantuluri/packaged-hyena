@@ -10,7 +10,7 @@ import torch
 import torch.nn.functional as F
 from einops import rearrange, repeat
 
-from safari.src.ops.toeplitz import causal_convolution
+from hyena.src.ops.toeplitz import causal_convolution
 
 def krylov_sequential(L, A, b, c=None):
     """ Constant matrix A

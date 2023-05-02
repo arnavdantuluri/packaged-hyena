@@ -29,14 +29,14 @@ from omegaconf import DictConfig
 from pytorch_lightning import LightningDataModule
 
 
-from safari.src.utils import distributed
-import safari.src.utils.train
-log = safari.src.utils.train.get_logger(__name__)
+from hyena.src.utils import distributed
+import hyena.src.utils.train
+log = hyena.src.utils.train.get_logger(__name__)
 
 
-from safari.src.dataloaders.base import SequenceDataset, default_data_path
-from safari.src.dataloaders.utils.vocabulary import OpenAIVocab, Vocab
-import safari.src.utils as utils
+from hyena.src.dataloaders.base import SequenceDataset, default_data_path
+from hyena.src.dataloaders.utils.vocabulary import OpenAIVocab, Vocab
+import hyena.src.utils as utils
 
 project_root = Path(__file__).parent.parent.absolute()
 data_path = Path(__file__).absolute().parent / 'data'

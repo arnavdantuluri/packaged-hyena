@@ -2,8 +2,8 @@
 
 from functools import partial
 from torch import nn
-from safari.src.models.sequence.base import SequenceModule
-from safari.src.models.nn import LinearActivation, DropoutNd
+from hyena.src.models.sequence.base import SequenceModule
+from hyena.src.models.nn import LinearActivation, DropoutNd
 
 class FF(SequenceModule):
     def __init__(self, d_input, expand=2, d_output=None, transposed=False, activation='gelu', initializer=None, dropout=0.0, tie_dropout=False):

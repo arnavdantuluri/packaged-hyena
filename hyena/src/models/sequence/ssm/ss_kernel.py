@@ -14,14 +14,14 @@ import torch.nn.functional as F
 from einops import rearrange, repeat
 from opt_einsum import contract
 
-from safari.src.models.sequence.ssm.ss_kernel_diag import SSKernelDiag, EMAKernel
-from safari.src.models.sequence.ssm.ss_kernel_shift import SSKernelShift
+from hyena.src.models.sequence.ssm.ss_kernel_diag import SSKernelDiag, EMAKernel
+from hyena.src.models.sequence.ssm.ss_kernel_shift import SSKernelShift
 
-from safari.src.models.sequence.ssm import hippo
-from safari.src.models.sequence.ssm import dplr
-from safari.src.ops.krylov import power
+from hyena.src.models.sequence.ssm import hippo
+from hyena.src.models.sequence.ssm import dplr
+from hyena.src.ops.krylov import power
 
-from safari.src.utils.train import get_logger
+from hyena.src.utils.train import get_logger
 
 log = get_logger(__name__)
 

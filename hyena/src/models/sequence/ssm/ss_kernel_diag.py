@@ -12,23 +12,23 @@ import torch.nn.functional as F
 from einops import rearrange, repeat
 from opt_einsum import contract
 
-from safari.src.utils.train import OptimModule
+from hyena.src.utils.train import OptimModule
 
-from safari.src.utils.train import get_logger
+from hyena.src.utils.train import get_logger
 
 log = get_logger(__name__)
 
 # This could be None if the CUDA import fails
-from safari.src.ops.vandermonde import log_vandermonde_fast
+from hyena.src.ops.vandermonde import log_vandermonde_fast
 try:
     import pykeops
-    from safari.src.ops.vandermonde import log_vandermonde, log_vandermonde_transpose
+    from hyena.src.ops.vandermonde import log_vandermonde, log_vandermonde_transpose
     has_pykeops = True
     log.info("Pykeops installation found.")
 except ImportError:
     has_pykeops = False
-    from safari.src.ops.vandermonde import log_vandermonde_naive as log_vandermonde
-    from safari.src.ops.vandermonde import log_vandermonde_transpose_naive as log_vandermonde_transpose
+    from hyena.src.ops.vandermonde import log_vandermonde_naive as log_vandermonde
+    from hyena.src.ops.vandermonde import log_vandermonde_transpose_naive as log_vandermonde_transpose
     log.warning(
         "Falling back on slow Vandermonde kernel. Install pykeops for improved memory efficiency."
     )
@@ -249,10 +249,10 @@ class SSKernelDiag(OptimModule):
 class EMAKernel(OptimModule):
     """Translation of Mega's MultiHeadEMA.
     This is a minimal implementation of the convolution kernel part of the module.
-    This module, together with the main S4 block in safari.src.models.sequence.ss.s4
+    This module, together with the main S4 block in hyena.src.models.sequence.ss.s4
     (which is really just a fft-conv wrapper around any convolution kernel,
     such as this one), should be exactly equivalent to using the original Mega
-    EMA module in safari.src.models.sequence.ss.ema.
+    EMA module in hyena.src.models.sequence.ss.ema.
     Two additional flags have been provided to resolve discrepencies in parameter
     count between S4(D) and EMA
     - `dt_tie` makes the shape of the step size \Delta (H, 1) instead of (H, N)

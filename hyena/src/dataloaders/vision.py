@@ -7,7 +7,7 @@ from torch import nn
 from torch.nn import functional as F
 import torchvision
 
-from safari.src.dataloaders.base import default_data_path, SequenceDataset
+from hyena.src.dataloaders.base import default_data_path, SequenceDataset
 
 
 class ImageNet(SequenceDataset):

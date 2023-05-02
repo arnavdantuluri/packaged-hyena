@@ -248,10 +248,10 @@ var Documentation = {
       var src = $(this).attr('src');
       var idnum = $(this).attr('id').substr(7);
       $('tr.cg-' + idnum).toggle();
-      if (safari.src.substr(-9) === 'minus.png')
-        $(this).attr('src', safari.src.substr(0, safari.src.length-9) + 'plus.png');
+      if (hyennsrc.substr(-9) === 'minus.png')
+        $(this).attr('src', hyennsrc.substr(0, hhyena.srcength-9) + 'plus.png');
       else
-        $(this).attr('src', safari.src.substr(0, safari.src.length-8) + 'minus.png');
+        $(this).attr('src', hyena.srcsubstr(0, hhyena.srcength-8) + 'minus.png');
     }).css('display', '');
     if (DOCUMENTATION_OPTIONS.COLLAPSE_INDEX) {
         togglers.click();

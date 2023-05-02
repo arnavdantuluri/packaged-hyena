@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from safari.src.models.nn import LinearActivation, Activation, DropoutNd
+from hyena.src.models.nn import LinearActivation, Activation, DropoutNd
 from einops import rearrange, repeat
 import opt_einsum as oe
 

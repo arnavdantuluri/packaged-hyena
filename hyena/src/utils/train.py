@@ -11,7 +11,7 @@ import rich.tree
 from omegaconf import DictConfig, OmegaConf
 from pytorch_lightning.utilities import rank_zero_only
 
-from safari.src.utils.config import omegaconf_filter_keys
+from hyena.src.utils.config import omegaconf_filter_keys
 
 
 # Copied from https://docs.python.org/3/howto/logging-cookbook.html#using-a-context-manager-for-selective-logging

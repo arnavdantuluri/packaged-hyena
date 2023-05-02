@@ -3,12 +3,12 @@ import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange, reduce
 
-import safari.src.models.nn.utils as U
-import safari.src.utils as utils
-import safari.src.utils.config
-import safari.src.utils.train
+import hyena.src.models.nn.utils as U
+import hyena.src.utils as utils
+import hyena.src.utils.config
+import hyena.src.utils.train
 
-log = safari.src.utils.train.get_logger(__name__)
+log = hyena.src.utils.train.get_logger(__name__)
 
 
 class Decoder(nn.Module):

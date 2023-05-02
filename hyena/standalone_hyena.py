@@ -1,6 +1,6 @@
 """
 Simplified standalone version of Hyena: https://arxiv.org/abs/2302.10866, designed for quick experimentation.
-A complete version is available under `safari.src.models.sequence.hyena`.
+A complete version is available under `hyena.src.models.sequence.hyena`.
 """
 
 import math

@@ -17,7 +17,7 @@ from torch.utils.data import Dataset, DataLoader
 import warnings
 warnings.filterwarnings("ignore")
 
-from safari.src.dataloaders.base import SequenceDataset, default_data_path
+from hyena.src.dataloaders.base import SequenceDataset, default_data_path
 
 
 class TimeFeature:

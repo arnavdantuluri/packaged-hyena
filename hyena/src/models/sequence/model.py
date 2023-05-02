@@ -9,10 +9,10 @@ import torch
 import torch.nn as nn
 from einops import rearrange
 
-from safari.src.utils.config import to_list, to_dict
-from safari.src.models.sequence.block import SequenceResidualBlock
-from safari.src.models.sequence.base import SequenceModule
-from safari.src.models.nn.components import Normalization, DropoutNd
+from hyena.src.utils.config import to_list, to_dict
+from hyena.src.models.sequence.block import SequenceResidualBlock
+from hyena.src.models.sequence.base import SequenceModule
+from hyena.src.models.nn.components import Normalization, DropoutNd
 
 
 class SequenceModel(SequenceModule):
