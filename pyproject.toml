@@ -25,10 +25,13 @@ dependencies = [
     "omegaconf",
     "wandb",
     "einops",
+    "opt_einsum",
     "cmake", # For pykeops support
-    # pykeops # Seems to cause various issues; leaving uninstalled by default
+    "pykeops", # Seems to cause various issues; leaving uninstalled by default
     "transformers", # For some schedulers
-
+    "torchvision",
+    "torchtext",
+    "datasets",
     # Model specific packges
     # pytorch-fast-transformers # for Performer
 
